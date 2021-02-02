@@ -2,11 +2,13 @@ import React, { useEffect } from 'react'
 import {AppBar, Container, Grid, Grow, Typography} from '@material-ui/core'
 import Posts from './components/Posts/Posts'
 import useStyles from './styles'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { getPosts } from './action/posts'
 
 const App = () => {
     const classes=useStyles()
+    const posts = useSelector((state) => state.posts);
+    console.log(posts);
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getPosts());

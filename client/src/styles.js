@@ -11,6 +11,6 @@ export default makeStyles(() => ({
     height:'50px',
   },
   heading: {
-    color: 'rgba(0,183,255, 1)',
+    color: '#8800FF',
   },
 }));
